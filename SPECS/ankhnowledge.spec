@@ -30,12 +30,16 @@ make %{?_smp_mflags}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%make_install
+%make_install DESTDIR=%{buildroot}
 
 
 %files
 %license COPYING
 %doc README.md
+/usr/bin/Ankhnowledge
+/usr/include/*
+/usr/lib64/*
+/usr/local/*
 
 
 %changelog
